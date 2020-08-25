@@ -1,8 +1,21 @@
-export type LogoProps = {
+export type ImageProps = {
   alternativeText: string
   url: string
 }
 
+export type ButtonProps = {
+  text: string
+  url: string
+}
+
+export type HeaderProps = {
+  title: string
+  description: string
+  button: ButtonProps
+  image: ImageProps
+}
+
 export type LandingPageProps = {
-  logo: LogoProps
+  logo: ImageProps
+  header: HeaderProps
 }

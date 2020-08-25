@@ -1,10 +1,33 @@
 export const GET_LANDING_PAGE = /* GraphQL */ `
-  query GET_LANDING_PAGE {
-    landingPage {
-      logo {
-        alternativeText
+  fragment imageData on UploadFile {
+    alternativeText
+    url
+  }
+
+  fragment logo on LandingPage {
+    logo {
+      ...imageData
+    }
+  }
+
+  fragment header on LandingPage {
+    header {
+      title
+      description
+      button {
+        text
         url
       }
+      image {
+        ...imageData
+      }
+    }
+  }
+
+  query GET_LANDING_PAGE {
+    landingPage {
+      ...logo
+      ...header
     }
   }
 `
