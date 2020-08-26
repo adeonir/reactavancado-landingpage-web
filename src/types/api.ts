@@ -48,10 +48,22 @@ export type ConceptsProps = {
   concepts: ConceptItems[]
 }
 
+type ModuleItems = {
+  title: string
+  subtitle: string
+  description: string
+}
+
+export type ModulesProps = {
+  title: string
+  modules: ModuleItems[]
+}
+
 export type LandingPageProps = {
   logo: ImageProps
   header: HeaderProps
   sectionAboutProject: AboutProjectProps
   sectionTech: TechProps
   sectionConcepts: ConceptsProps
+  sectionModules: ModulesProps
 }
