@@ -39,16 +39,16 @@ export type TechProps = {
   icons: TechIcon[]
 }
 
-type ConceptItems = {
+export type ConceptItem = {
   title: string
 }
 
 export type ConceptsProps = {
   title: string
-  concepts: ConceptItems[]
+  concepts: ConceptItem[]
 }
 
-type ModuleItems = {
+export type ModuleItem = {
   title: string
   subtitle: string
   description: string
@@ -56,7 +56,7 @@ type ModuleItems = {
 
 export type ModulesProps = {
   title: string
-  modules: ModuleItems[]
+  modules: ModuleItem[]
 }
 
 export type AgendaProps = {
@@ -64,7 +64,7 @@ export type AgendaProps = {
   description: string
 }
 
-type BenefitsItems = {
+export type BenefitItem = {
   title: string
 }
 
@@ -72,32 +72,32 @@ export type PricingBoxProps = {
   totalPrice: number
   installmentsNumber: number
   installmentPrice: number
-  benefits: BenefitsItems[]
+  benefits: BenefitItem[]
   button: {
     text: string
     url: string
   }
 }
 
-export type SocialLinks = {
+export type SocialLink = {
   title: string
   url: string
 }
 
-export type AuthorsProps = {
+export type Author = {
   photo: {
     alternativeText: string
     url: string
   }
   name: string
   role: string
-  socialLinks: SocialLinks[]
+  socialLinks: SocialLink[]
   description: string
 }
 
 export type AboutUsProps = {
   title: string
-  authors: AuthorsProps[]
+  authors: Author[]
 }
 
 export type LandingPageProps = {

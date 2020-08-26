@@ -4,7 +4,7 @@ import { GrGithub } from 'react-icons/gr'
 import { FaDribbble, FaTwitter } from 'react-icons/fa'
 
 import * as S from './styles'
-import { AuthorsProps } from 'types/api'
+import { Author } from 'types/api'
 import { getImageUrl } from 'utils/getImageUrl'
 
 const icons = {
@@ -13,13 +13,13 @@ const icons = {
   Dribbble: <FaDribbble />
 }
 
-const ProfileCard = ({
+const ProfileCard: React.FC<Author> = ({
   name,
   role,
   photo,
   socialLinks,
   description
-}: AuthorsProps) => (
+}) => (
   <S.Card key={name}>
     <S.Image
       src={getImageUrl(photo.url)}
