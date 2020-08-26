@@ -66,6 +66,28 @@ export const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionAgenda on LandingPage {
+    sectionAgenda {
+      title
+      description
+    }
+  }
+
+  fragment sectionPricingBox on LandingPage {
+    sectionPricingBox {
+      totalPrice
+      installmentsNumber
+      installmentPrice
+      benefits {
+        title
+      }
+      button {
+        text
+        url
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
@@ -74,6 +96,8 @@ export const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionTech
       ...sectionConcepts
       ...sectionModules
+      ...sectionAgenda
+      ...sectionPricingBox
     }
   }
 `
